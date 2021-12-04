@@ -9,7 +9,6 @@
   },
   "permissions": [
     "storage",
-    "https://api.hackernoon.com/",
     "https://zenquotes.io/api/today/",
     "http://dataservice.accuweather.com/forecasts/v1/daily/1day/331123?apikey=B7DgsNbyAXjhYJt3MLmwDxozLgAYA0Bs&metric=true"
   ],
