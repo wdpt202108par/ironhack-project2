@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Test",
+  "version": "1.0",
+  "description": "This is a test",
+  "author": "Ironhack",
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "https://api.hackernoon.com/",
+    "https://zenquotes.io/api/today/",
+    "http://dataservice.accuweather.com/forecasts/v1/daily/1day/331123?apikey=B7DgsNbyAXjhYJt3MLmwDxozLgAYA0Bs&metric=true"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png"
+  },
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js; object-src 'self'"
+}

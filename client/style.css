@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+}
+
+.container {
+  width: 33%;
+}
+
+.container > div {
+  cursor: move;
+  cursor: grab;
+}
+
+.gu-mirror {
+  width: 33%;
+  height: 30px;
+  cursor: grabbing;
+  margin: 10px;
+  padding: 10px;
+  background-color: green;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.gu-transit {
+  display: none;
+}
+
+#col-one {
+  background: red;
+}
+
+#col-two {
+  background: blue;
+}
+
+#col-three {
+  background: green;
+}
