@@ -141,3 +141,127 @@ header {
     transform: translateY(-400%);
   }
 }
+
+/*auth forms*/
+
+.auth-section {
+  background: linear-gradient(var(--main-blue), var(--white));
+  height: 100vh;
+  display: flex;
+}
+
+.auth-container {
+  background: var(--white);
+  margin : auto;
+  padding: 10px 25px 30px;
+  width: 40vh;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container h2 {
+text-align: center;  
+color:var(--main-blue);
+font-size: 170%;
+}
+
+.auth-container p {
+  margin: 25px auto;
+  color:var(--main-blue);
+  text-align: center;
+}
+
+#oAuth-btn-g {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+}
+
+#oAuth-btn-g a {
+  color: black;
+  font-size: 80%;
+  vertical-align: center;
+}
+#oAuth-btn-fb {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: solid 1px #0067DB;
+  background-color: #0067DB;
+  display: flex;
+  justify-content: center;
+}
+
+#oAuth-btn-fb a {
+  color: var(--white);
+  font-size: 80%;
+  vertical-align: center;
+}
+
+#oAuth-btn-g img {
+  margin: 0 10px;
+  width: 16px; 
+  height: 16px; 
+}
+
+#oAuth-btn-fb img {
+  margin: 0 10px;
+  width: 16px; 
+  height: 16px; 
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-section label {
+  color: black;
+  font-size: 80%;
+  padding: 5px 0;
+}
+
+.auth-section input {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.auth-section input:valid {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: solid 1px var(--main-blue);
+  background-color: #c6c4ff3a;
+}
+
+.auth-section input:invalid {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: solid 1px red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+#auth-btn {
+  margin: 30px auto 20px;
+  padding: 10px 20px;
+  background: var(--main-red);
+  color: var(--white);
+  border: none; 
+}
+
+.caption:hidden {
+  display: none;
+}
+
+.caption {
+  color: red;
+  font-size: 50%;
+  padding-right: 25px;
+  margin-bottom: 10px;
+}
