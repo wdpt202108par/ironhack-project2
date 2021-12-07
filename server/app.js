@@ -30,6 +30,29 @@ app.use("/", index);
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
+app.get('/login', function (req, res, next) {
+  console.log('req.session=', req.session)
+
+  req.session.user = 'JDOE'
+  res.json({ok: 'oui'})
+})
+
+app.get('/islogged', function (req, res, next) {
+  console.log('req.session=', req.session)
+
+  if (req.session.user === 'JDOE') {
+    res.json({ok: req.session.user})
+  } else {
+    res.status(401).send('not logged')
+  }
+})
+
+app.get('/logout', function (req, res, next) {
+  req.session.destroy()
+
+  res.send('logged out')
+})
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

@@ -1,5 +1,6 @@
 // We reuse this import in order to have access to the `body` property in requests
 const express = require("express");
+const cors = require('cors')
 
 // ℹ️ Responsible for the messages you see in the terminal as requests are coming in
 // https://www.npmjs.com/package/morgan
@@ -50,12 +51,28 @@ module.exports = (app) => {
     favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
   );
 
+  app.use(cors({
+    // origin: [
+    //   'chrome-extension://meknbcgemnbgfppfickhgfjeacekeikc',
+    //   'http://127.0.0.1:5500'
+    // ],
+    origin: function (origin, cb) {
+      // console.log('origin', origin)
+      cb(null, origin)
+    },
+    credentials: true
+  }))
+
   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
   app.use(
     session({
       secret: process.env.SESSION_SECRET || "super hyper secret key",
       resave: false,
       saveUninitialized: false,
+      cookie: {
+        secure: true,
+        sameSite: "none"
+      },
       store: MongoStore.create({
         mongoUrl: MONGO_URI,
       }),
